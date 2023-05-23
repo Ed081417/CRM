@@ -15,8 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', [HomeController::class, 'index'])
-    ->name('index');
-
-Route::get('/login', [AuthController::class, 'login'])
-    ->name('login');
+Route::get('/login', [AuthController::class, 'showLoginForm'])
+    ->name('show-login-form');
