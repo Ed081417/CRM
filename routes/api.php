@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,6 @@ Route::post('/login', [AuthController::class, 'login'])
     ->name('api.login');
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('', [HomeController::class, 'index'])
-        ->name('api.index');
+    // Route::get('', [HomeController::class, 'index'])
+    //     ->name('api.index');
 });
