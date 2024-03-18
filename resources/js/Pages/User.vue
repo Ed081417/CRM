@@ -35,36 +35,42 @@ import { Head } from '@inertiajs/vue3';
             <div class="bg-white sm:rounded-lg">
                 <table class="table">
                     <!-- head -->
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
-                    </tr>
+                    <thead class="text-center">
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Skills</th>
+                            <th></th>
+                        </tr>
                     </thead>
-                    <tbody>
-                    <!-- row 1 -->
-                    <tr>
-                        <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                        <td>Blue</td>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                        <th>2</th>
-                        <td>Hart Hagerty</td>
-                        <td>Desktop Support Technician</td>
-                        <td>Purple</td>
-                    </tr>
-                    <!-- row 3 -->
-                    <tr>
-                        <th>3</th>
-                        <td>Brice Swyre</td>
-                        <td>Tax Accountant</td>
-                        <td>Red</td>
-                    </tr>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>Cy Ganderton</td>
+                            <td>email@email.com</td>
+                            <td>Web development</td>
+                            <td>
+                                <button class="btn btn-warning mr-2">Edit</button>
+                                <button class="btn btn-error">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hart Hagerty</td>
+                            <td>email@email.com</td>
+                            <td>VA</td>
+                            <td>
+                                <button class="btn btn-warning mr-2">Edit</button>
+                                <button class="btn btn-error">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Brice Swyre</td>
+                            <td>email@email.com</td>
+                            <td>AI</td>
+                            <td>
+                                <button class="btn btn-warning mr-2">Edit</button>
+                                <button class="btn btn-error">Delete</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
