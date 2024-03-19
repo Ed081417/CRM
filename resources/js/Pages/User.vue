@@ -17,8 +17,10 @@ import { Head } from '@inertiajs/vue3';
                         <div class="form-control">
                             <label class="label" for="fullName">Full Name</label>
                             <input class="input input-bordered" type="text" id="fullName">
+
                             <label class="label" for="email">Email</label>
                             <input class="input input-bordered" type="text" id="email">
+                            
                             <label class="label" for="skills">Skills</label>
                             <textarea class="textarea textarea-bordered" id="skills" placeholder="Web dev, AI, ..."></textarea>
                         </div>

@@ -8,7 +8,7 @@ use Inertia\Response;
 class ProjectController extends Controller
 {
     /**
-     * Display the user page.
+     * Display the project page.
      */
     public function index(): Response
     {

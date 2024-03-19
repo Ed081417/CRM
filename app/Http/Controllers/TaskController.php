@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class ClientController extends Controller
+class TaskController extends Controller
 {
     /**
-     * Display the client page.
+     * Display the task page.
      */
     public function index(): Response
     {
-        return Inertia::render('Client');
+        return Inertia::render('Task');
     }
 }

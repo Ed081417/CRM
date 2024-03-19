@@ -17,10 +17,13 @@ import { Head } from '@inertiajs/vue3';
                         <div class="form-control">
                             <label class="label" for="company">Company</label>
                             <input class="input input-bordered" type="text" id="company">
+
                             <label class="label" for="fullName">Client Name</label>
                             <input class="input input-bordered" type="text" id="fullName">
+
                             <label class="label" for="email">Email</label>
                             <input class="input input-bordered" type="text" id="email">
+                            
                             <label class="label" for="address">Address</label>
                             <textarea class="textarea textarea-bordered" id="address"></textarea>
                         </div>

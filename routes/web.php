@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -31,6 +32,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('users');
     Route::get('/clients', [ClientController::class, 'index'])->name('clients');
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+    Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');
 });
 
 Route::middleware('auth')->group(function () {
