@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TaskController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -29,7 +29,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
     Route::get('/clients', [ClientController::class, 'index'])->name('clients');
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
     Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');

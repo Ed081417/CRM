@@ -12,7 +12,7 @@ import { Head } from '@inertiajs/vue3';
                 <div class="col-span-1">
                     <div class="card bg-info text-info-content">
                         <div class="stat">
-                            <div class="stat-title">Users</div>
+                            <div class="stat-title">Employees</div>
                             <div class="stat-value">50</div>
                         </div>
                     </div>

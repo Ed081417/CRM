@@ -4,16 +4,16 @@ import { Head } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <Head title="User" />
+    <Head title="Employee" />
 
     <AuthenticatedLayout>
         <div class="container py-12">
             <!-- Create User modal -->
             <div class="flex justify-end">
-                <button class="btn btn-info py-4 mb-4" onclick="my_modal_1.showModal()">Add User</button>
+                <button class="btn btn-info py-4 mb-4" onclick="my_modal_1.showModal()">Add Employee</button>
                 <dialog id="my_modal_1" class="modal">
                     <div class="modal-box">
-                        <h3 class="font-bold text-xl uppercase text-center">User</h3>
+                        <h3 class="font-bold text-xl uppercase text-center">Employee</h3>
                         <div class="form-control">
                             <label class="label" for="fullName">Full Name</label>
                             <input class="input input-bordered" type="text" id="fullName">
