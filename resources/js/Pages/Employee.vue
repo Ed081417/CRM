@@ -3,6 +3,12 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import EmployeeTable from "@/Components/EmployeeTable.vue";
 import EmployeeModal from "@/Components/EmployeeModal.vue";
 import { Head } from "@inertiajs/vue3";
+
+defineProps({
+	employees: {
+		type: Array,
+	},
+});
 </script>
 
 <template>
@@ -21,7 +27,9 @@ import { Head } from "@inertiajs/vue3";
 
 			<!-- Employee table -->
 			<div class="bg-white sm:rounded-lg">
-				<EmployeeTable />
+				<EmployeeTable 
+					:employees="employees"
+				/>
 			</div>
 		</div>
 	</AuthenticatedLayout>
