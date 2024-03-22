@@ -29,7 +29,11 @@ Route::get('/', function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees');
+
+    Route::controller(EmployeeController::class)->prefix('employees')->group(function () {
+        Route::get('/', 'index')->name('employees');
+    });
+
     Route::get('/clients', [ClientController::class, 'index'])->name('clients');
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
     Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');
