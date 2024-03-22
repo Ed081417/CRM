@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-	<table class="table">
+	<table class="table table-fixed">
 		<!-- head -->
 		<thead class="text-center">
 			<tr>
