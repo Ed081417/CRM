@@ -10,4 +10,15 @@ class Employee extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'email',
+        'skills',
+    ];
 }

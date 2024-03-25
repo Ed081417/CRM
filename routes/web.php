@@ -32,6 +32,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::controller(EmployeeController::class)->prefix('employees')->group(function () {
         Route::get('/', 'index')->name('employees');
+        Route::post('/', 'store')->name('employees.store');
     });
 
     Route::get('/clients', [ClientController::class, 'index'])->name('clients');
