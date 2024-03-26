@@ -15,7 +15,7 @@ class EmployeeController extends Controller
      */
     public function index(): Response
     {
-        $employees = Employee::orderByDesc('id')->get();
+        $employees = Employee::orderByDesc('id')->paginate(10);
 
         return Inertia::render('Employee', [
             'employees' => $employees,
