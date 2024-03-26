@@ -8,7 +8,6 @@ defineProps({
 
 <template>
 	<table class="table table-fixed">
-		<!-- head -->
 		<thead class="text-center">
 			<tr>
 				<th>Name</th>
@@ -18,7 +17,7 @@ defineProps({
 			</tr>
 		</thead>
 		<tbody class="text-center">
-			<tr v-for="employee in employees">
+			<tr v-for="employee in employees.data">
 				<td>{{ employee.name }}</td>
 				<td>{{ employee.email }}</td>
 				<td>{{ employee.skills }}</td>

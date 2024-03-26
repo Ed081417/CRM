@@ -2,9 +2,10 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import EmployeeTable from "@/Components/EmployeeTable.vue";
 import EmployeeModal from "@/Components/EmployeeModal.vue";
+import Pagination from "@/Components/Pagination.vue";
 import { Head } from "@inertiajs/vue3";
 
-defineProps({
+const props = defineProps({
 	employees: {
 		type: Array,
 	},
@@ -26,6 +27,10 @@ defineProps({
 				<EmployeeTable 
 					:employees="employees"
 				/>
+			</div>
+
+			<div class="mt-5">
+				<pagination :links="employees.links" />
 			</div>
 		</div>
 	</AuthenticatedLayout>
