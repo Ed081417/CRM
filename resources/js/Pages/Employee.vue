@@ -18,10 +18,6 @@ defineProps({
 		<div class="container py-12">
 			<!-- Create User -->
 			<div class="flex justify-end">
-				<button class="btn-info btn mb-4 py-4" onclick="addEmployeeModal.showModal()">
-					Add Employee
-				</button>
-
 				<EmployeeModal />
 			</div>
 

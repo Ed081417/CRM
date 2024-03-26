@@ -1,20 +1,36 @@
 <script setup>
+import { ref } from 'vue'
 import { useForm } from '@inertiajs/vue3';
 
+const addEmployeeModal = ref(false)
 const form = useForm({
 	name: '',
 	email: '',
 	skills: '',
 });
 
+const openAddEmployeeModal = () => {
+	addEmployeeModal.value = true
+}
+
+const closeAddEmployeeModal = () => {
+	form.reset()
+	addEmployeeModal.value = false
+}
+
 const submit = () => {
 	form.post(route('employees.store'), {
-		onSuccess: () => form.reset(),
+		onSuccess: () => closeAddEmployeeModal(),
 	});
 };
 </script>
 
 <template>
+	<label  class="btn-info btn mb-4 py-4" @click="openAddEmployeeModal">
+		Add Employee
+	</label >
+
+	<input type="checkbox" v-model="addEmployeeModal" id="addEmployeeModal" class="modal-toggle" />
 	<dialog id="addEmployeeModal" class="modal">
 		<div class="modal-box">
 			<h3 class="text-center text-xl font-bold uppercase">
@@ -57,9 +73,7 @@ const submit = () => {
 					>
 						Create
 					</button>
-					<form method="dialog">
-						<button class="btn-neutral btn">close</button>
-					</form>
+					<label class="btn-neutral btn" @click="closeAddEmployeeModal">Close</label>
 				</div>
 			</form>
 		</div>
